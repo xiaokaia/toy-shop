@@ -1,0 +1,98 @@
+// 按下去背景颜色
+// -----------------------------------------------------------------------------
+@mixin tap-color ($color, $opacity: .9) {
+  background-color: $color;
+  &:active {
+    background-color: $color * $opacity;
+  }
+}
+
+@mixin mask ($z-index:99,$opacity: .4){
+  position: fixed;
+  z-index: $z-index;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  align-items: center;
+  background-color: rgba(0,0,0,$opacity);
+  animation: fadeIn .3s  both;
+}
+
+
+// 单行文本溢出显示省略号
+// -----------------------------------------------------------------------------
+@mixin text-overflow($align: justify) {
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: $align;
+}
+
+// 一像素边框
+// -----------------------------------------------------------------------------
+@mixin top-line($color, $zindex: 0) {
+  content: '';
+  position: absolute;
+  z-index: $zindex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid $color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@mixin bottom-line($color, $zindex: 0) {
+  content: '';
+  position: absolute;
+  z-index: $zindex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid $color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@mixin left-line($color, $zindex: 0) {
+  content: '';
+  position: absolute;
+  z-index: $zindex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-left: 1px solid $color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@mixin right-line($color, $zindex: 0) {
+  content: '';
+  position: absolute;
+  z-index: $zindex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-right: 1px solid $color;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+@keyframes fadeIn{
+  0%{
+      opacity:0;
+  }
+  100%{
+      opacity:1;
+  }
+}
