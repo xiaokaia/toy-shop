@@ -23,7 +23,7 @@ Vue.use(vueFeedback)
 Vue.use(Toast)
 Vue.use(axiosPlugin);
 Vue.use(VueLazyload, {
-  loading: require('./common/image/default.png')
+  //loading: require('./common/image/default.png')
 })
 
 const router = new VueRouter({

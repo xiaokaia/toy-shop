@@ -4,9 +4,7 @@
  */
 
  let baseUrl = {
-     apiUrl : 'http://api.lizikj.com',
-     imgURL : 'http://rs158.lizikj.com',
-     thirdUrl: 'http://third.lizikj.com'
+     
  }
 
  export default baseUrl;
