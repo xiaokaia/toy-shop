@@ -13,9 +13,9 @@ Vue.use(Toast);
 const Axios = axios.create({
   timeout: 10000, //请求超时时间
   responseType: "json",
-  withCredentials: true, //是否允许携带cookie
+  //withCredentials: true, //是否允许携带cookie
   headers: {
-    //"Content-Type": "application/x-www-form-urlencoded;charset=utf-8"
+    //"Content-Type": "application/x-www-form-urlencoded"
   }
 })
 
@@ -31,7 +31,11 @@ Axios.interceptors.request.use(
         config.data = Qs.stringify(config.data);
       }
     }
-    config.headers.common['lz-system'] = 'client' //设置header信息
+    //config.headers.common['lz-system'] = 'client' //设置header信息
+    if(sessionStorage.getItem('Ticket')){
+      config.headers.common['Ticket'] = sessionStorage.getItem('Ticket')//设置header信息
+    }
+    //config.headers.common['Ticket'] = 'okOTjwpDwxJR666hVWnj_L_jp87w'//设置header信息
     return config;
   },
   error => {
@@ -44,7 +48,7 @@ Axios.interceptors.request.use(
  * 返回状态判断(添加响应拦截器)
  */
 Axios.interceptors.response.use((res) => {
-  if (res.data && res.data.code != 1) {
+  if (res.data && res.data.code != 200) {
     return Promise.reject(res.data);
   }
   return res.data;
