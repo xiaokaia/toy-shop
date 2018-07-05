@@ -5,29 +5,11 @@
 </template>
 
 <script type="text/ecmascript-6">
-
-
 export default {
   data () {
     return {
-     
     }
   },
-  components: {
-    
-  },
-  created(){
-    
-  },
-  computed: {
-  },
-  watch: {
-  },
-  mounted(){
-  },
-  methods:{
-    
-  }
 }
 </script>
 <style rel="stylesheet/scss" lang="scss" scoped>
@@ -42,5 +24,6 @@ export default {
     text-align: center;
     color: #ffffff;
   }
+
 </style>
 

@@ -4,28 +4,27 @@ import routes from 'router'
 import VueRouter from 'vue-router'
 import Toast from 'base/toast';
 import axiosPlugin from 'common/js/https'
-import VueLazyload from 'vue-lazyload'
-import fastclick from 'fastclick'
 import 'common/scss/index.scss'
 import store from 'store'
 import { setWechatTitle } from 'utils'
+<<<<<<< HEAD
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import vueFeedback from 'vue-feedback'
 import 'swiper/dist/css/swiper.css'
 import $ from 'jquery'
 import 'lib-flexible'
+=======
+import FastClick from 'fastclick'
+import 'vue-ydui/dist/ydui.rem.css';
+import 'vue-ydui/dist/ydui.base.css'
+>>>>>>> 8a3ccae780e61a3835a454e195a4330d289f03c6
 
 
-fastclick.attach(document.body)
+FastClick.attach(document.body);
 Vue.config.productionTip = false
-Vue.use(VueAwesomeSwiper)
 Vue.use(VueRouter)
-Vue.use(vueFeedback)
 Vue.use(Toast)
 Vue.use(axiosPlugin);
-Vue.use(VueLazyload, {
-  //loading: require('./common/image/default.png')
-})
 
 const router = new VueRouter({
   routes
