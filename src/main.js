@@ -7,17 +7,11 @@ import axiosPlugin from 'common/js/https'
 import 'common/scss/index.scss'
 import store from 'store'
 import { setWechatTitle } from 'utils'
-<<<<<<< HEAD
-import VueAwesomeSwiper from 'vue-awesome-swiper'
 import vueFeedback from 'vue-feedback'
-import 'swiper/dist/css/swiper.css'
 import $ from 'jquery'
 import 'lib-flexible'
-=======
+
 import FastClick from 'fastclick'
-import 'vue-ydui/dist/ydui.rem.css';
-import 'vue-ydui/dist/ydui.base.css'
->>>>>>> 8a3ccae780e61a3835a454e195a4330d289f03c6
 
 
 FastClick.attach(document.body);
