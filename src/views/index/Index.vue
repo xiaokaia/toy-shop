@@ -1,6 +1,6 @@
 <template>
   <div class="main-wrapper">
-    首页
+    <div class="title">首页</div>
   </div>
 </template>
 
@@ -33,6 +33,14 @@ export default {
 <style rel="stylesheet/scss" lang="scss" scoped>
   @import "src/common/scss/variable.scss";
   @import "src/common/scss/mixins.scss";
-  
+  .title{
+    font-size: 18px;
+    width: 750px;
+    height: 80px;
+    background: black;
+    line-height: 80px;
+    text-align: center;
+    color: #ffffff;
+  }
 </style>
 

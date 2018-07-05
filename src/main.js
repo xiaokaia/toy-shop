@@ -13,6 +13,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import vueFeedback from 'vue-feedback'
 import 'swiper/dist/css/swiper.css'
 import $ from 'jquery'
+import 'lib-flexible'
 
 
 fastclick.attach(document.body)
